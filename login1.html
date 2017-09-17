@@ -1,0 +1,114 @@
+	
+	
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon">
+
+    <title></title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript">
+   	function login() {
+		var username=document.getElementById('username').value;
+		var password=document.getElementById('password').value;
+		var datastring="username="+username+"&Password="+password;
+		$.ajax({
+			url:"https://nextlaw.co.za/api/user/generate_auth_cookie/?",
+			type:"POST",
+			data:"username="+username+"&password="+password,
+			crossDomain:true,
+			cache:false,
+			dataType:"jsonp",
+			success: function(res)
+			{
+				alert(JSON.stringify(res));
+				subscriptioncheck();
+				
+			}
+		});
+		}
+	</script>
+	  <script>
+	function subscriptioncheck() {
+			$.ajax({
+			url:"https://nextlaw.co.za/wp-json/wc/v1/subscriptions?(P[\d]+)?customer_id=1&consumer_key=ck_4a329087cb58569c64a57037420c5e35a1b6d69a&consumer_secret=cs_d39feafa9305793aa0e3d50124f7ef113a456f65&context=view&status=active",
+			type:"GET",
+			async: false,
+			crossDomain:true,
+			cache:false,
+			dataType:"_jsonp",
+			success: function(resu)
+			{
+				window.location.href="dashboard.html";
+								
+			}
+		});
+		}
+    </script>
+	<style>
+
+	body {
+	   overflow-y:hidden;
+	}
+	</style>
+
+    </head>
+    <body>
+	
+    <!--section logo ends here-->
+    <section>
+	
+    <div class="container-fluid height-bodysdd">
+		<div class="larg-logo-ap">  <img src="images/logosplash.png"></div>
+		<p class="welcom-text">Welcome</p>
+		<p class="welcom-text-dis"> NextLaw's Legal Resource Search Engine </p>
+		
+    <div class="col-xs-12 form-code">
+	
+    <div class="form-group has-success has-feedback">
+		<div class="input-group">
+		<span class="input-group-addon"><i class="fa fa-user-o" aria-hidden="true"></i></span>
+		<input type="text" class="form-control" id="username" aria-describedby="inputGroupSuccess1Status">
+		</div> 
+    </div>
+	
+		
+    <div class="form-group has-success has-feedback">
+		<div class="input-group">
+		<span class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i></span>
+		<input type="password" class="form-control" id="password" aria-describedby="inputGroupSuccess1Status">
+		</div> 
+    </div>
+
+	<p class="remem-text">Remember login detail</p>
+	
+    <div class="button-updeas"onclick="login();"><button class="btn-blue">Login</button></div>
+
+   
+   <p class="forg-pass">Forgot Password? </p>  
+   <!-- div start here  --> 
+   
+    </div>
+   
+    
+     
+    </div>
+  
+    </section>
+    <!-- Bootstrap core JavaScript ================================================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+

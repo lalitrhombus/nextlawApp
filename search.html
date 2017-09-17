@@ -1,0 +1,207 @@
+	
+	
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon">
+
+    <title></title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+	<script src="cordova.js"></script>    
+<script src="js/Toast.js"></script>
+<link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css"/>
+<script src="js/jquery.min.js.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
+    <script type="text/javascript">
+    function goback() {
+		window.location.href="dashboard.html";
+		slideright();
+		}
+	function list() {
+		window.location.href="searchlist.html";
+		}
+
+   			
+    </script>
+
+   <style>
+	body {
+	   overflow-y:hidden;
+
+	}
+
+	.styled-select {
+	   width: 100px;
+	   height: 17px;
+	   overflow: hidden;
+	   overflow: -moz-hidden-unscrollable;
+	   background: url(images/downarrow_blue.png) no-repeat right white;
+	   border: 2px double red;
+	   display: inline-block;
+	   position:relative;
+	   }
+	.multiselect
+	{
+		padding: 0px;
+		margin: 0px;
+		background-color: transparent;
+		width:100%;
+	}
+	.btn-group .open .multiselect:active:hover,.open > .dropdown-toggle.btn-default:focus
+	{
+		background-color: transparent !important;
+	}
+	.multiselect .multiselect-selected-text
+	{
+		float: left;
+		margin-left: 11px;
+		text-shadow: none;
+		color: #a0a0a0;
+	}
+	.multiselect .caret
+	{
+		float: right;
+		border-top: 4px solid #ffffff;
+		margin-right: 6px;
+	}
+	.multiselect-container
+	{
+		width:100%;
+		    height: 180px;
+    overflow-y: scroll;
+		    background-color: #4D4948;
+
+	}
+	.multiselect-container label
+	{
+		top:0px !important;
+		
+	}
+	.multiselect-native-select .btn-group
+	{
+		width:100%;
+	}
+    </style>
+
+    </head>
+    <body>
+  
+    <section>
+
+    <div class="main-secction-serch">
+  
+		<div class="all-class-head">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12 bh">
+					 <div class="back-btn-barr"onclick="goback()"><img src="images/search-panel.png" class="img-responsive"> </a></div> 
+					 <div class="add-panel-head">
+					 <h3>Enter Search Criteria</h3>
+					 </div>
+				</div>
+				<div class="logo-img-ser"><img src="images/searchhistory-logo.png"></div>
+				
+			</div>
+        </div>
+		</div>
+	
+    <!--section logo ends here-->
+	<div class="container-fluid height-bodysd" style="margin-top:135px;">
+   
+		<div class="col-xs-12 form-code">
+		
+			<div class="form-group has-error has-feedback">
+			  <input type="text" class="form-control" id="searchtext" placeholder="Search">
+			  <span class="glyphicon glyphicon-search form-control-feedback"></span>
+			</div>
+			      <div class="form-group">
+				    
+				    <select class="legalauthority" multiple="multiple">
+					      <option value="Constitutional Court Judgments">Constitutional Court</option>
+					      <option value="Supreme Court of Appeal Judgments">Supreme Court of Appeal</option>
+					      <option value="High Court Judgments">High Court</option>
+					      <option value="Labour Appeal Court Judgments">Labour Appeal Court</option>
+					      <option value="Labour Court Judgments">Labour Court</option>
+					      <option value="Competition Appeal Court Decisions">Competition Appeal Court</option>
+					      <option value="Competition Tribunal Decisions">Competition Tribunal</option>
+					      <option value="Companies Tribunal Decisions">Companies Tribunal</option>
+					      <option value="Commissioner of Patent Decisions">Commissioner of Patent</option>
+					      <option value="Land Claims Court Judgments">Land Claims Court</option>
+					      <option value="Tax Court Decisions">Tax Court</option>
+					      <option value="Electoral Court Decisions">Electoral Court</option>
+					      <option value="CGSO">Consumer Goods and Services Ombud</option>
+					      <option value="National Consumer Tribunal Decisions">National Consumer Tribunal</option>
+					    </select>
+
+					<script type="text/javascript">
+					$('.legalauthority').multiselect({
+					  enableClickableOptGroups: true
+					});
+					</script>
+				   
+			</div>
+
+			
+			<div class="form-group has-error has-feedback">
+			  <input type="text" class="form-control" id="lquestion" placeholder="Legal Question">
+			  <span class="glyphicon glyphicon-search form-control-feedback"></span>
+			</div>
+			
+			<div class="form-group has-error has-feedback">
+			  <input type="text" class="form-control" id="ooam" placeholder="Outcome Of A Matter">
+			  <span class="glyphicon glyphicon-search form-control-feedback"></span>
+			</div>
+
+            <div class="form-group">
+			<select class="ola" multiple="multiple">
+				<option value="Statutes of Parliament">Statutes of Parliament</option>
+				<option value="Rules of Courts">Rules of Courts</option>
+				<option value="Regulations and Guidelines">Regulations and Guidelines</option>
+				<option value="Gazettes">Gazettes</option>
+				<option value="Provincial Legislation">Provincial Legislation</option>
+				<option value="Journals  and  Articles">Journals and Articles</option>
+				<option value="CCMA, Arbitration and Bargaining Council">CCMA, Arbitration and Bargaining Council</option>
+				<option value="All">All of the above.</option>
+				</select>
+				<script type="text/javascript">
+					$('.ola').multiselect({
+					  enableClickableOptGroups: true
+					});
+					</script>
+			</div>
+
+
+		    <div class="col-xs-12">
+
+			  <div class="button-updea"onclick="search()"><button class="btn-blue">Search</button></div>
+		  
+		    </div>
+   
+   <!-- div start here  --> 
+        </div>
+		
+    </div>
+    </div>
+	
+	</section>
+    <!-- Bootstrap core JavaScript ================================================== -->
+	
+	
+	<script src="js/search.js"></script>  
+	
+	<script src="js/app.js"></script>
+	
+  </body>
+</html>
+

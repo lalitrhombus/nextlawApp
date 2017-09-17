@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon">
+
+    <title></title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript">
+    function goback() {
+		slideright();
+		window.location.href="lateststatutes.html";
+		}
+	function registration3() {
+		window.location.href="registration3.html";
+		}
+    </script>
+    <style>
+		body {
+		background-image: none;
+		background:none;
+		}
+		
+	.profile-back-img {
+		background-image: url("images/profile-user.png");
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		width: 100%;
+		margin-top:65px;
+
+		}
+	.profile-back-img img {
+		 margin: 0 auto;
+		}
+	
+		
+	</style>
+
+	
+    </head>
+    <body>
+		 <section>
+
+	<div class="main-secction-serch">
+		<div class="all-class-head">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12 bh">
+					 <div class="back-btn-barr" onclick='goback()'><img src="images/search-panel.png" class="img-responsive"> </div> 
+					 <div class="add-panel-head">
+					 <h3>Add a Note</h3>
+					 </div>
+				</div>
+				<div class="logo-img-ser"><img src="images/searchhistory-logo.png"></div>
+				
+			</div>
+        </div>
+		
+			 
+			 
+	<div class=""></div>
+     
+<form action="">
+	<div class="container">
+        <div class="col-sm-12">  
+        <div class="form-group"> <h4>Add a Note</h4> <textarea rows="14" cols="30" style="resize:none;width: 100%;"  id="name" placeholder="Enter your Note"></textarea> </div>
+       </div>
+        </div>
+
+	
+
+
+
+
+
+	 
+<div class="col-xs-12 pannel-footer-toa" id="whatever"> 
+		<div class="col-xs-6" style="padding-left:0px;"><p class="prev-buta" id="edibtn">
+<input type="button" id="edidet" value="Edit Note " onclick="editnote();">  
+</p> </div><div class="col-xs-6" style="padding-right:0px;padding-left:0px;"><p class="panel-dioa" id="svbtn"> 
+  <input type="button" id="save" value="Save" onclick="savenote();" disabled="true"></p></div>
+		</div>
+	
+	</div>
+		
+	</div>
+	</section>
+    <!-- Bootstrap core JavaScript ================================================== -->
+	<script src="cordova.js"></script>
+	<script src="js/jquery.min.js.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/Toast.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/note.js"></script>
+  </body>
+</html>
+
